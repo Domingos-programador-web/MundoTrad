@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <title>Mundo trad | Tradutor Inteligente</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+
+<body>
+    <div id="capa">
+                <header>
+            <h1>🌍 Mundo <b>Trad.</b></h1>
+            <small>&copy;Domingos Dias</small>
+        </header>
+        
+        <p class="intro">O Mundo Trad. é uma aplicação web de alto desempenho dedicada à tradução instantânea de textos.</p>
+
+        <button class="start">Começar</button>
+        
+        <div class="dev">
+            <p class="creator">Created By: <span>Domingos Dias</span></p>
+
+            <p>Design By: <span>Rosária Tualungo</span></p>
+        </div>
+        <p class="versao">versão online • profissional • v1.0</p>
+    </div>
+    <div class="container">
+        <header>
+            <h1>🌍 Mundo <b>Trad.</b></h1>
+            <small>&copy;Domingos Dias</small>
+        </header>
+        
+        <div class="translator-interface">
+            <div class="row">
+                <div class="input-group">
+                    <select id="langFrom">
+                        <option value="pt">Português</option>
+                        <option value="en">Inglês</option>
+                        <option value="es">Espanhol</option>
+                        <option value="zh">Mandarim</option>
+                        <option value="fr">Francês</option>
+                    </select>
+                    <textarea id="textInput" placeholder="Escreva o que quer traduzir."></textarea>
+                </div>
+                
+                <button class="swap-btn" onclick="swapLanguages()">⇄</button>
+                
+                <div class="input-group">
+                    <select id="langTo">
+                        <option value="zh">Mandarim</option>
+                        <option value="pt">Português</option>
+                        <option value="en">Inglês</option>
+                        <option value="es">Espanhol</option>
+                        <option value="fr">Francês</option>
+                    </select>
+                    <textarea id="textOutput" placeholder="Tradução..." readonly></textarea>
+                    <button class="voice-btn" onclick="speakText()" title="Ouvir tradução">🔊</button>
+                </div>
+            </div>
+            
+            <button class="btn-translate" onclick="handleTranslate()">
+                Traduzir agora
+                <div id="loader" class="loading"></div>
+            </button>
+        </div>
+    </div>
+    
+    <script src="scripts.js"></script>
+</body>
+
+</html>
