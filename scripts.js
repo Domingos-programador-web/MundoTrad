@@ -51,10 +51,17 @@
             handleTranslate();
           }
         });
+        const container = document.querySelector('div.container')
+        
+        container.classList.add('hide')
+        
         const btnStart = document.querySelector('button.start')
         btnStart.addEventListener('click', function(e){
+          
+          
           setTimeout(()=>{
             remover(this)
+            container.classList.remove('hide')
           },1200)
           
         })
